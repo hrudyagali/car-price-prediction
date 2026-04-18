@@ -1,45 +1,92 @@
-# car-price-prediction-using-flask-
-Developed a machine learning model using Gradient Boosting Regressor to predict used car prices , Built a Flask-based web application to take user input and display predicted price.
-ml_flask_app/ 
-│ 
-├── app.py 
-├── model.pkl 
-├── requirements.txt 
-├──train_model.py
-└── templates/ 
-└── index.html 
+# Car Price Prediction Using Flask
 
+## Overview
+This project is a machine learning-based web application that predicts the selling price of used cars in India. It uses a Gradient Boosting Regressor model trained on real-world data and is deployed using Flask to provide an interactive user interface.
 
-Run the train_model.py file to get the model.pkl file 
+---
 
-app.py is the flask application
+## Tech Stack
+- Machine Learning: Scikit-learn (Gradient Boosting Regressor)
+- Backend: Flask
+- Programming Language: Python
+- Libraries: NumPy, Pandas
 
- Requirements File (requirements.txt) 
-1.flask 
-2.numpy 
-3.pandas 
-4.scikit-learn 
+---
 
-The dataset is taken from kaggle.com
+## Project Structure
+```
+ml_flask_app/
+│
+├── app.py              # Flask application
+├── model.pkl           # Trained model (generated after training)
+├── requirements.txt    # Project dependencies
+├── train_model.py      # Script to train the model
+└── templates/
+    └── index.html      # Frontend interface
+```
 
-About this Dataset
-The used car market in India is a dynamic and ever-changing landscape. Prices can fluctuate wildly based on a variety of factors including the make and model of the car, its mileage, its condition and the current market conditions. As a result, it can be difficult for sellers to accurately price their cars.
+---
 
-This dataset contains information about used cars.
-This data can be used for a lot of purposes such as Used Car Price Prediction using different Machine Learning Techniques.
+## Installation and Setup
 
-Data Description (Feature Information)
+### 1. Clone the repository
+```
+git clone https://github.com/hrudyagali/car-price-prediction
+```
 
-car_name: Car's Full name, which includes brand and specific model name.
-brand: Brand Name of the particular car.
-model: Exact model name of the car of a particular brand.
-seller_type: Which Type of seller is selling the used car
-fuel_type: Fuel used in the used car, which was put up on sale.
-transmission_type: Transmission used in the used car, which was put on sale.
-vehicle_age: The count of years since car was bought.
-mileage: It is the number of kilometer the car runs per litre.
-engine: It is the engine capacity in cc(cubic centimeters)
-max_power: Max power it produces in BHP.
-seats: Total number of seats in car.
-selling_price: The sale price which was put up on website.
+### 2. Install dependencies
+```
+pip install -r requirements.txt
+```
 
+### 3. Train the model
+```
+python train_model.py
+```
+
+### 4. Run the Flask application
+```
+python app.py
+```
+
+### 5. Open in browser
+```
+http://127.0.0.1:5000/
+```
+
+---
+
+## Dataset
+Source: Kaggle
+
+The dataset contains information about used cars in India and includes the following features:
+
+- car_name: Full name of the car  
+- brand: Manufacturer of the car  
+- model: Specific model name  
+- seller_type: Type of seller  
+- fuel_type: Fuel used  
+- transmission_type: Transmission type  
+- vehicle_age: Age of the vehicle  
+- mileage: Distance per litre  
+- engine: Engine capacity (cc)  
+- max_power: Maximum power (BHP)  
+- seats: Number of seats  
+- selling_price: Target variable  
+
+---
+
+## How It Works
+- The model is trained using historical car data  
+- User inputs are collected through the web interface  
+- The Flask backend processes the input and sends it to the trained model  
+- The model predicts the selling price  
+- The predicted price is displayed to the user  
+
+---
+
+## Features
+- Predicts used car prices based on multiple parameters  
+- Simple and interactive web interface  
+- Integration of machine learning model with a web application  
+- Easy to run locally  
